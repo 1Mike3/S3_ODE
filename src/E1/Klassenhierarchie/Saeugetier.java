@@ -1,4 +1,4 @@
-package Klassenhierarchie;
+package E1.Klassenhierarchie;
 
 public abstract class Saeugetier {
     public void atmen() {

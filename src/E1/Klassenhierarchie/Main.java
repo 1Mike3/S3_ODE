@@ -1,4 +1,4 @@
-package Klassenhierarchie;
+package E1.Klassenhierarchie;
 
 public class Main {
     public static void main(String[] args) {

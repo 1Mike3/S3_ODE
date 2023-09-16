@@ -1,4 +1,4 @@
-package Klassenhierarchie;
+package E1.Klassenhierarchie;
 
 public class Katze extends Saeugetier {
     public void schnurren() {

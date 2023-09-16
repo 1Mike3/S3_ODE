@@ -1,4 +1,6 @@
-package interfaceform;
+package E2.Klassenhierarchie;
+
+import E2.Klassenhierarchie.Form;
 
 public class GlDreieck implements Form {
     private int seite;
@@ -23,6 +25,6 @@ public class GlDreieck implements Form {
 
     @Override
     public String info() {
-        return "Gleichseitiges Dreieck mit Seite: " + seite;
+        return String.format("GI Dreieck: Seite: %d, Fläche: %.2f, Fläche-HEX: %X , Umfang: %.2f", this.seite, this.flaeche(), ((long) flaeche()), this.umfang());
     }
 }

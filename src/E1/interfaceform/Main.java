@@ -1,4 +1,4 @@
-package interfaceform;
+package E1.interfaceform;
 
 public class Main {
     public static void main(String[] args) {

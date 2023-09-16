@@ -1,4 +1,4 @@
-package Klassenhierarchie;
+package E1.Klassenhierarchie;
 
 public class Leopard extends Katze {
     public void superspeed() {

@@ -1,4 +1,4 @@
-package interfaceform;
+package E1.interfaceform;
 
 public class Quadrat implements Form {
     private int seite;
