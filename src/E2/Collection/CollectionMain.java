@@ -21,7 +21,7 @@ public class CollectionMain {
 
         formen.sort(Comparator.comparing(Form::flaeche));
 
-        for (Form form : formen) {
+        for (Form form : formen) { 
             System.out.println(form.info());
         }
 
