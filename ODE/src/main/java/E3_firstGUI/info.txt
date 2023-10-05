@@ -1,0 +1,2 @@
+its one of the hello-view.fxml files in the resource folder
+... you should really rename them ist starting to become a pain
