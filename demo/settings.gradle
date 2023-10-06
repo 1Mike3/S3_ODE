@@ -1,0 +1,4 @@
+rootProject.name = "demo"
+rootProject.children.each { it.name = rootProject.name }
+// Path: demo/src/main/java/module-info.java
+
