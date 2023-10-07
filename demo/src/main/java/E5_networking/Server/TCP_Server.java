@@ -7,14 +7,21 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
 
+import SantasLittleHelper.Helpers;
+
 public class TCP_Server {
 
     public static void main(String[] args) {
-        System.out.println("Server started");
+        if(Helpers.DEBUG)
+             System.out.println("Server started");
+
         try (ServerSocket serverSocket = new ServerSocket(4711)) {
             while (true) {
                 Socket clientConnection = serverSocket.accept();
-                System.out.println("IP-Address of client: " + clientConnection.getInetAddress());
+
+                if(Helpers.DEBUG)
+                    System.out.println("IP-Address of client: " + clientConnection.getInetAddress());
+
                 handleClient(clientConnection);
                 clientConnection.close();
             }
@@ -24,7 +31,8 @@ public class TCP_Server {
     }
 
     private static void handleClient(Socket clientConnection) {
-        System.out.println("Method handleClient() called");
+        if(Helpers.DEBUG)
+            System.out.println("Method handleClient() called");
         try (OutputStream os = clientConnection.getOutputStream();
              InputStream is = clientConnection.getInputStream()) {
 
@@ -41,7 +49,8 @@ public class TCP_Server {
 
 
         while (true) {
-            System.out.println("I am waiting for messages from the client: ");
+            if(Helpers.DEBUG)
+                System.out.println("I am waiting for messages from the client: ");
 
             try {
                 int bytesRead = clientInputStream.read(b);

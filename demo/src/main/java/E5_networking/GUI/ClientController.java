@@ -6,7 +6,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
-import java.text.BreakIterator;
+import SantasLittleHelper.Helpers;
 
 public class ClientController {
 
@@ -44,7 +44,9 @@ public class ClientController {
 
     // Button Actions
     public void onAction_btn_setPort() {
-        System.out.println("Method onAction_btn_setPort() called");
+        if(Helpers.DEBUG)
+            System.out.println("Method onAction_btn_setPort() called");
+
         try {
             int number = Integer.parseInt(txt_setPort.getText());
             txt_currentPort.setText(String.valueOf(number));
@@ -57,7 +59,8 @@ public class ClientController {
         txt_setPort.setPromptText("Port set");
     }
     public void onAction_btn_startClient() {
-        System.out.println("Method onAction_btn_startClient() called");
+        if(Helpers.DEBUG)
+            System.out.println("Method onAction_btn_startClient() called");
     	txt_clientState.setText("Client started");
         try {
             TCP_Client.clientRuntime( portNumber);
@@ -68,14 +71,16 @@ public class ClientController {
         }
     }
     public void onAction_btn_stopClient() {
-        System.out.println("Method onAction_btn_stopClient() called");
+        if(Helpers.DEBUG)
+            System.out.println("Method onAction_btn_stopClient() called");
+
     	txt_clientState.setText("Client stopped");
 
-        TCP_Client.stopClient();
 
     }
     public void onAction_btn_send() {
-        System.out.println("Method onAction_btn_send() called");
+        if(Helpers.DEBUG)
+            System.out.println("Method onAction_btn_send() called");
         try {
             TCP_Client.sendToServer(txt_sendText.getText());
 
