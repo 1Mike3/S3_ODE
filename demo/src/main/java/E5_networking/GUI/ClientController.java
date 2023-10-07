@@ -6,10 +6,15 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
+import java.text.BreakIterator;
+
 public class ClientController {
+
 
     // Shared
     private int portNumber;
+
+    public static String messageFromServer;
 
 
     // Buttons
@@ -31,7 +36,8 @@ public class ClientController {
     TextField txt_clientState;
     @FXML
     TextField txt_sendText;
-
+    @FXML
+    TextField txt_messagesFromServer;
 
 
 
@@ -80,8 +86,15 @@ public class ClientController {
         }
 
     	txt_clientState.setText("Client sent: " + txt_sendText.getText());
+        txt_messagesFromServer.setText(messageFromServer);
     }
 
+    // Misc Methods
+public static void setTxt_messagesFromServer(String message){
+    messageFromServer = message;
+}
+
+    // Initialize
 
 @FXML
     public void initialize() {

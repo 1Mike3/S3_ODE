@@ -51,6 +51,9 @@ public class TCP_Server {
                   }
                 System.out.println("Received from client: " + new String(b, 0, bytesRead) + "\n");
 
+               String response = "I Have Received Your Message: " + new String(b, 0, bytesRead) + "\n";
+               clientOutputStream.write(response.getBytes());
+
             } catch (IOException e) {
                 System.out.println("Error while reading server message: " + e.getMessage());
                 break;

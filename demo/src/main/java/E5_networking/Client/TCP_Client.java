@@ -31,7 +31,13 @@ public class TCP_Client {
 
                     System.out.println("Entered send Messages Statement While Loop ");
                     clientOutputStream.write(sendMessage.getBytes());
-                    sendMessages = false;
+
+
+                    InputStream is = connectionToServer.getInputStream();
+                    byte[] b = new byte[1000];
+                    int bytesRead = is.read(b);
+
+                    ClientController.setTxt_messagesFromServer(new String(b, 0, bytesRead));
 
 
 
