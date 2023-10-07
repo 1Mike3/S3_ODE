@@ -6,6 +6,7 @@
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <TitledPane animated="false" collapsible="false" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="804.0" text="TCP Client + Loopback Chat" textAlignment="CENTER" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="E5_networking.GUI.ClientController">
@@ -22,11 +23,18 @@
                         <TextField fx:id="txt_setPort" layoutX="1.0" layoutY="45.0" prefHeight="37.0" prefWidth="148.0" promptText="Enter Port" />
                         <Button fx:id="btn_setPort" layoutX="148.0" layoutY="45.0" mnemonicParsing="false" onAction="#onAction_btn_setPort" prefHeight="37.0" prefWidth="102.0" text="SetPort" />
                         <TextField fx:id="txt_currentPort" editable="false" layoutX="250.0" layoutY="45.0" prefHeight="37.0" prefWidth="148.0" promptText="Current Port" />
-                        <Button fx:id="btn_startClient" layoutX="-1.0" layoutY="140.0" mnemonicParsing="false" onAction="#onAction_btn_startClient" prefHeight="41.0" prefWidth="149.0" text="Start Client" />
+                        <Button fx:id="btn_startClient" layoutX="-1.0" layoutY="140.0" mnemonicParsing="false" onAction="#onAction_btn_startClient" prefHeight="41.0" prefWidth="149.0" text="Start Client" visible="false" />
                         <Text layoutX="153.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Port Selection" />
-                        <Text layoutX="137.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Client Initialization" />
-                        <TextField fx:id="txt_clientState" editable="false" layoutX="148.0" layoutY="140.0" prefHeight="40.0" prefWidth="247.0" promptText="Client State" />
-                        <Button fx:id="btn_stopClient" layoutY="181.0" mnemonicParsing="false" onAction="#onAction_btn_stopClient" prefHeight="43.0" prefWidth="148.0" text="Stop Client" />
+                        <Text layoutX="139.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Client Information" />
+                        <TextField fx:id="txt_clientState" editable="false" layoutX="86.0" layoutY="141.0" prefHeight="40.0" prefWidth="247.0" promptText="Client State" />
+                        <Button fx:id="btn_stopClient" layoutY="181.0" mnemonicParsing="false" onAction="#onAction_btn_stopClient" prefHeight="43.0" prefWidth="148.0" text="Stop Client" visible="false" />
+                        <Text layoutX="309.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(4711 def. Server)">
+                           <font>
+                              <Font size="8.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="txt_messagesFromServer" editable="false" layoutX="9.0" layoutY="239.0" prefHeight="46.0" prefWidth="380.0" promptText="Mesages Recieved from Server" />
+                        <Text layoutX="128.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recieved from Server" />
                      </children></AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
               </items>

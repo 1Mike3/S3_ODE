@@ -18,9 +18,10 @@ try {
     FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("E5_networking.fxml"));
     Parent root=fxmlLoader.load();
 
-    primaryStage.setTitle("TCP Server");
+    primaryStage.setTitle("TCP Client");
     primaryStage.setScene(new Scene(root,800,600));
     primaryStage.show();
+
 
 
 } catch (NullPointerException e) {
