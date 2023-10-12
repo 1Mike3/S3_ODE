@@ -1,9 +1,9 @@
 package SantasLittleHelper;
 
 public class Helpers {
-    public static boolean DEBUG = false;
+    public static boolean DEBUG = true;
 
-    public void print(String message) {
+    public static void print(String message) {
         if (DEBUG) {
             System.out.println(message);
         }

@@ -13,7 +13,6 @@ public class ClientController {
 
     // Shared
     private int portNumber;
-
     public static String messageFromServer;
 
 

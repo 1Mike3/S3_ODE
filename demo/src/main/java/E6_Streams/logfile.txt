@@ -1,0 +1,12 @@
+file assigned
+filepath: /home/student/IdeaProjects/_3_ObjectOrientedService/./demo/src/main/java/E6_Streams/testfile.txt
+file exists: true
+file is directory: false
+file is file: true
+file is hidden: false
+cannonicalPath?:/home/student/IdeaProjects/_3_ObjectOrientedService/demo/src/main/java/E6_Streams/testfile.txt
+file Parrent: ./demo/src/main/java/E6_Streams
+file length: 25
+file can read writ and execute: true true false
+file last modified: 1697143972696
+working Directory at time of Prints: /home/student/IdeaProjects/_3_ObjectOrientedService
