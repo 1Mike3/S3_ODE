@@ -6,7 +6,7 @@ plugins {
   id 'org.beryx.jlink' version '2.25.0'
 }
 
-group 'E5_networking.GUI'
+group 'E7_Threads.src'
 version '1.0-SNAPSHOT'
 
 repositories {
@@ -27,8 +27,8 @@ tasks.withType(JavaCompile) {
 application {
   //mainModule = 'com.example.demo'
   //mainClass = 'com.example.demo.HelloApplication'
-  mainModule = 'E5_networking.GUI'
-  mainClass = 'E5_networking.GUI.ClientApplication'
+  mainMosule = 'E7_Threads'
+  mainClass = 'E7_Threads/src/main/java/at/uastw/Main.java'
 }
 
 javafx {
@@ -36,11 +36,26 @@ javafx {
   modules = ['javafx.controls', 'javafx.fxml']
 }
 
+/* from E5
 dependencies {
 
+  implementation 'org.testng:testng:7.1.0'
+  implementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
+  implementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
+  implementation 'org.junit:junit-engine-api:5.0.0-ALPHA'
   testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
   testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
 }
+*/
+
+dependencies {
+  implementation 'org.testng:testng:7.1.0'
+  implementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
+  implementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
+  testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+  testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
 
 test {
   useJUnitPlatform()  }
